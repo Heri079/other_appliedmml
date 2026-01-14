@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenCV Imágenes - Detección Facial</title>
+    <link rel="stylesheet" href="style.css">
+    <script async src="js/opencv.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body onload="initApp()">
+    <div class="container">
+        <h1>Detección Facial en Tiempo Real</h1>
+        <video id="cam_input" width="640" height="480"></video>
+        <canvas id="canvas_output" width="640" height="480"></canvas>
+        <div id="stats">
+            <p>Caras detectadas: <span id="faceCount">0</span></p>
+            <p>Sonrisas detectadas: <span id="smileCount">0</span></p>
+            <p>Interacciones: <span id="interactionCount">0</span></p>
+            <p>Tiempo de sesión: <span id="sessionTime">0s</span></p>
+        </div>
+        <div id="buttons">
+            <button onclick="cycleMode()">Cambiar Modo (Caras/Ojos/Sonrisas)</button>
+            <button onclick="sendData()">Enviar Datos</button>
+        </div>
+        <div id="errorMsg" class="error"></div>
+    </div>
+</body>
+</html>
